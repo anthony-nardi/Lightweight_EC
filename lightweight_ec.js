@@ -33,7 +33,7 @@ var ec = (function () {
 
     for (property in component) {
 
-	 	 if (!component.hasOwnProperty(property) || !this.hasOwnProperty(property)) continue;
+	 	  if (!component.hasOwnProperty(property) || !this.hasOwnProperty(property)) continue;
 
 	  delete this[property];
 
@@ -43,7 +43,7 @@ var ec = (function () {
 
   };
 
-  var createEntity = function () {
+  var createEntity = (function () {
 
     var entity = function () {};
 
@@ -61,7 +61,7 @@ var ec = (function () {
 
 		};
 
-  };
+  }());
 
   returnObject = function () { return createEntity() };
 
