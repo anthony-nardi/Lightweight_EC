@@ -11,7 +11,7 @@ var ec = (function () {
 
       return counter++;
 	
-	};
+		};
 
   }());
 
@@ -19,7 +19,7 @@ var ec = (function () {
 
 	for (property in component) {
 
-      if (!component.hasOwnProperty(property)) continue;
+    if (!component.hasOwnProperty(property)) continue;
 	
 	  this[property] = component[property];
 
@@ -33,7 +33,7 @@ var ec = (function () {
 
     for (property in component) {
 
-	  if (!component.hasOwnProperty(property) || !this.hasOwnProperty(property)) continue;
+	 	 if (!component.hasOwnProperty(property) || !this.hasOwnProperty(property)) continue;
 
 	  delete this[property];
 
@@ -47,19 +47,19 @@ var ec = (function () {
 
     var entity = function () {};
 
-	entity.prototype.addComponent = addComponent;
-	entity.prototype.removeComponent = removeComponent;
+	  entity.prototype.addComponent = addComponent;
+	  entity.prototype.removeComponent = removeComponent;
 
-	return function () {
+		return function () {
 
-	  var e = Object.create(entity.prototype);
+		  var entityInstance = Object.create(entity.prototype);
 
-	  e.id = uid();
-	  list[e.id] = e;
+		  entityInstance.id = uid();
+		  list[entityInstance.id] = entityInstance;
 
-	  return e;
+		  return entityInstance;
 
-	};
+		};
 
   };
 
