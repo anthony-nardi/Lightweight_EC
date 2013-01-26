@@ -43,27 +43,20 @@ var ec = (function () {
 
   };
 
-  var createEntity = (function () {
+  var createEntity = function (prototype) {
 
-    var entity = function () {};
+	  var entityInstance = Object.create(prototype || null);
 
-	  entity.prototype.addComponent = addComponent;
-	  entity.prototype.removeComponent = removeComponent;
+	  entityInstance.addComponent = addComponent;
+	  entityInstance.removeComponent = removeComponent;
+	  entityInstance.id = uid();
+	  list[entityInstance.id] = entityInstance;
 
-		return function () {
+	  return entityInstance;
 
-		  var entityInstance = Object.create(entity.prototype);
+	};
 
-		  entityInstance.id = uid();
-		  list[entityInstance.id] = entityInstance;
-
-		  return entityInstance;
-
-		};
-
-  }());
-
-  returnObject = function () { return createEntity() };
+  returnObject = function (prototype) { return createEntity(prototype) };
 
   returnObject.list = list;
 
