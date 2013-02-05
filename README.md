@@ -11,6 +11,10 @@ The concept of Entity-Component frameworks is to break up models into pieces of 
 
 For example, a game developer wishes to create a player object.  Some main functions a player object must have are position, render method, event handling, etc. The position component may be as simple as an x, y, and angle of rotation. The interesting thing about this framework is the ability to utilize prototypical inheritance and the mixin pattern.  It's possible to create a base player object and then create instances of players each having functional variations.  Here is how you would do this:
 
+###Example
+
+***
+
 var position = {
   'x':0,
   'y':0
