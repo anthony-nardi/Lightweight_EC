@@ -14,7 +14,7 @@ For example, a game developer wishes to create a player object.  Some main funct
 ###Example
 
 ***
-
+```
 var position = {
   'x':0,
   'y':0
@@ -37,5 +37,5 @@ var jumpingPlayer = ec(player);
 //instantiate an instance of the basse player object
 
 jumpingPlayer.jump = function () {//jump}; //augment entity with specialized own props
-
+```
 Obviously, you can chain the inheritance indefinitely and arbitrarily augement the entity with any objects you'd like.
