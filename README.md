@@ -21,13 +21,13 @@ var position = {
 };
 
 var events = {
-  'on' : function (name, callback) {//do stuff},
-  'off': function (name) {//do stuff},
-  'fire':function (name) {//do stuff}
+  'on' : function (name, callback) {/*do stuff*/},
+  'off': function (name) {/*do stuff*/},
+  'fire':function (name) {/*do stuff*/}
 };
 
 var renderPlayer = {
-  'render': function () {//draw player}
+  'render': function () {/*draw player*/}
 };
 
 var player = ec().addComponent(position).addComponent(events).addComponent(renderPlayer);  
@@ -36,6 +36,6 @@ var player = ec().addComponent(position).addComponent(events).addComponent(rende
 var jumpingPlayer = ec(player);
 //instantiate an instance of the basse player object
 
-jumpingPlayer.jump = function () {//jump}; //augment entity with specialized own props
+jumpingPlayer.jump = function () {/*jump*/}; //augment entity with specialized own props
 ```
 Obviously, you can chain the inheritance indefinitely and arbitrarily augement the entity with any objects you'd like.
