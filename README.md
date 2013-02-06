@@ -14,7 +14,7 @@ For example, a game developer wishes to create a player object.  Some main funct
 ###Example
 
 ***
-```
+```javascript
 var position = {
   'x':0,
   'y':0
